@@ -19,6 +19,11 @@
   .warm{
     background-image: url("/imgs/warm.jpg");
   }
+  .err{
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+  }
   .cold{
     background-image: url("/imgs/rainy.jpg");
   }

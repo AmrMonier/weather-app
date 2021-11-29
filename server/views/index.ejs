@@ -17,21 +17,28 @@
               type="text"
               placeholder="Search..."
               class="search-bar"
+              name="city"
             />
             </form>
           </div>
+          <% if (typeof err !== 'undefined') {%>
+            <h2 class="err"><%= err %></h2>
+
+            <% }%>
+            <% if (typeof data !== 'undefined') {%>
           <div class="weather-info" v-if="weather.main">
-            <div class="location">City, Country</div>
+            <div class="location"><%= data.location.city %>, <%= data.location.country %></div>
             <div class="date">30/11/2021</div>
-            <div class="temprature">24°C</div>
+            <div class="temprature"><%= data.temp %>°C</div>
             <div class="weather">
               Cloudy
             </div>
             <div class="wind">
-              25 KM
+              <%= data.wind.speed %> KM
             </div>
             
           </div>
+          <% } %>
         </main>
       </div>
 </body>
