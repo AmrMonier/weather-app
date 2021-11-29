@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="app" class="cold">
+        <main>
+          <h1>What is the wheather now ?!</h1>
+          <div class="search-box">
+            <form action="/" method="post">
+                <input
+              type="text"
+              placeholder="Search..."
+              class="search-bar"
+            />
+            </form>
+          </div>
+          <div class="weather-info" v-if="weather.main">
+            <div class="location">City, Country</div>
+            <div class="date">30/11/2021</div>
+            <div class="temprature">24°C</div>
+            <div class="weather">
+              Cloudy
+            </div>
+            <div class="wind">
+              25 KM
+            </div>
+            
+          </div>
+        </main>
+      </div>
+</body>
+</html>
